@@ -1,0 +1,277 @@
+:root {
+    /* cores primárias */
+    --cor-pri: #E1173F;       /* Botão primário, Botão secundário, Icone ilustrativo, Mensagem de erro, Aba, Loader, Paginação, Linha do tempo */
+    --cor-pri-ativa: #AF002B; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-pri-hover: #C50030; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+    
+    /* Cores secundárias */
+    --cor-seg: #3B69FF;       /* Botão seletor, pop over */
+    --cor-seg-ativa: #0E24D3; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-seg-hover: #2B469C; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+
+    --cor-seg-destaque: #73308B; /* Gráficos e Texto em destaque */
+    --cor-grafico2: #B41A83;     /* Gráficos */
+    --cor-grafico3: #F36279;     /* Gráficos */
+    --cor-grafico4: #2B469C;     /* Gráficos */
+    
+    /* Cores sinalizadoras */
+    --cor-noti-sucesso: #0BCC56;    /* Notificação de sucesso */
+    --cor-noti-erro: #E1173F;       /* Notificação de erros e erros em geral */
+    --cor-noti-alerta: #FFBC00;     /* Notificação de alerta */
+    --cor-noti-orientacao: #3B69FF; /* Notificação de orientação, link de texto, botão pilula */
+    --cor-noti-divulgacao: #73308B; /* Notificação de divulgação*/
+
+    /* Cores dos alertas - fundo dos alertas */
+    --bg-noti-sucesso: #E6FAEE;    /* Sucesso */
+    --bg-noti-erro: #FCE7EB;       /* Erro */
+    --bg-noti-atencao: #FEFBD5;    /* Atenção */
+    --bg-noti-informacao: #EBF0FF; /* Informação */
+    --bg-noti-divulgacao: #F1EAF3; /* Divulgação */
+
+    /* box status e categoria */
+    --box-status-sucesso: #0BCC56;   /* box com status de sucesso */
+    --box-status-analise: #FFBC00;   /* box com status de analise */
+    --box-status-ativo: #3B69FF;     /* box com status de ativo */
+    --box-status-inativo:#A7A8AC;    /* box com status de inativo */
+    --box-status-cancelado: #E1173F; /* box com status de cancelado */
+    
+    --box-categoria-salmao: #F36279;   /* box com status de sucesso */
+    --box-categoria-vermelho: #E1173F; /* box com status de analise */
+    --box-categoria-violeta: #B41A83;  /* box com status de ativo */
+    --box-categoria-roxo:#73308B;      /* box com status de inativo */
+    --box-categoria-azul: #2B469C;     /* box com status de cancelado */
+    
+    --cor-range: #5DC864; /* progress-bar e footer-navigation*/
+
+    /* Tons de cinza */
+    --cor-text-bg-colorido: #FFFFFF; /*Text em fundos coloridos */
+    --cor-linha: #E4E5E9;            /* Linha dos campos, Linha das abas, Linha barra de progresso, Linha divisória, bullet inativa de carousel, bg rangebar */
+    --cor-desabilitado: #A7A8AC;     /* Componentes desabilitados, Texto desabilitado e Cor dos icones */
+    --cor-pri-text: #47484C;         /* Texto dos campos, Texto de parágrafo, Listas, Itens de Menu, Icones de interface */
+    --cor-seg-text: #6D6E71;         /* Titulo em lista de dados, Texto das labels com campo preenchido e Texto de legenda */
+    --cor-titulo: #000000;           /* Titulos */
+    --bg-components: #FFFFFF;        /* background para todos os componentes exceto a pagina  */
+    --bg-page: #F0F1F5;              /* Planos de fundo */
+    --bg-modal: rgba(0, 0, 0, 0.65); /* cor #000000 com trasparência de 65% - Modal fundo */
+    --bg-gradiente-header: linear-gradient(to right, #8E2B40, #542F38);    
+    --bg-gradiente-canal: linear-gradient(44deg, #D90D43, #792038, #2F2F2F);
+    
+    /* Contornos dos componentes */
+    --cor-borda: #F0F1F5; /* cor da borda dos componentes */
+    --tam-borda: 1px; /* tamanho da borda para os componentes */
+    --shadow-lv1: 0px 2px 8px rgba(0, 0, 0, 0.16); /* level 1 - Cards, gavetas(gaveta não tem contorno) */
+    --shadow-lv2: 0px 4px 12px rgba(0, 0, 0, 0.16); /* level 2 - Containers, caixas de busca(a caixa não tem contorno) */
+    --shadow-lv3: 0px 16px 32px rgba(0, 0, 0, 0.16); /* level 3 - Botões flutuantes(não tem contorno) */
+    --shadow-top-lv1: 0px -2px 8px rgba(0, 0, 0, 0.16); /*  */
+    --shadow-top-lv2: 0px -4px 12px rgba(0, 0, 0, 0.16); /*  */
+    --shadow-top-lv3: 0px -16px 32px rgba(0, 0, 0, 0.16); /*  */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    -webkit-text-size-adjust:100%;
+}
+
+html::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(44deg, #540dd9, #0a2144, #2F2F2F);
+}
+
+.html-page-loaded::after {
+    display: none;
+}
+
+body * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    touch-action: manipulation !important;
+    -ms-touch-action: manipulation; /* IE10 */
+    /*PARA IOS*/
+}
+
+.bradesco-page {
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-page);
+    font-family: "bradescolinkregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bradesco-page-error {
+    border: 1px solid var(--cor-noti-erro);
+}
+
+.bradesco-page-loader-wrapper {
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    height: 105px;
+    width: 320px;
+    display: block;
+    margin: auto;
+}
+
+.bradesco-page-loader {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: linear-gradient(44deg, #D90D43, #792038, #2F2F2F);
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 150;
+}
+
+.bradesco-page-loader-logo {
+    background: url(../img/link-loader.svg);
+    background-size: 100% ;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+}
+
+.bradesco-page-loader-text {
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+}
+
+.bradesco-page-loader-path {
+    width: 200px;
+    height: 5px;
+    background: #a1183d;
+    border-radius: 2px;
+    margin: 20px auto;
+}
+
+.bradesco-page-loader-range {
+    width: 0%;
+    height: 5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: width 50ms linear;
+}
+
+.bradesco-page > .bradesco-input-button {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+* > H1,
+* > H2,
+* > H3,
+* > H4 {
+    font-weight: normal;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 8px;
+    width: 100%;
+    display: inline-block;
+    color: var(--cor-titulo);
+}
+
+* > H1 {
+    font-size: 22px;
+    font-family: 'bradescolinkboldregular';
+    line-height: 30pt;
+}
+
+* > H2 {
+    font-size: 20px;
+    font-family: 'bradescolinkmedium';
+    line-height: 24pt;
+}
+
+* > H3 {
+    font-size: 16px;
+    font-family: 'bradescolinksemiboldregular';
+    line-height: 20pt;
+}
+
+* > H4 {
+    font-size: 14px;
+    font-family: 'bradescolinksemiboldregular';
+    line-height: 18pt;
+}
+
+* > .bradesco-paragrafo-medio,
+* > p {
+    display: block;
+    margin: 0px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+* > .bradesco-paragrafo-medio {
+    font-size: 16px !important;
+    font-family: 'bradescolinkmedium';
+    line-height: 20pt !important;
+    color: var(--cor-pri-text);
+}
+
+* > select {
+    font-family: 'bradescolinkmedium';
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cor-pri-text);
+}
+
+* > p {
+    font-size: 14px;
+    font-family: 'bradescolinkmedium';
+    line-height: 18pt;
+    color: var(--cor-pri-text);
+    width: 100%;
+}
+
+* > legend {
+    font-size: 13px;
+    font-family: 'bradescolinkmedium';
+    line-height: 17pt;
+    color: var(--cor-seg-text);
+    padding: 8px;
+}
+
+* > a,
+* > p > a,
+* > a > * {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor-seg);
+    font-size: 14px;
+    font-family: 'bradescolinksemiboldregular';
+    height: 17px;
+}
+
+* > a,
+* > a > * {
+    padding: 8px;
+}
+
+* > a:active {
+    color: var(--cor-seg-ativa);
+}
+
+* > p > a {
+    padding: 0px;
+}

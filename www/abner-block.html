@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/bra-content/css/bra-content-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-page/css/bra-page-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-input-button/css/bra-input-button-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-select-underline/css/bra-select-underline-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-block/css/bra-block-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-box/css/bra-box-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-container/css/bra-container-1.0.0.css">
+</head>
+
+<body>
+    <bradesco-page>
+        <bradesco-content>
+            <h1>Bloqueio</h1>
+            <bradesco-box>
+                <bradesco-input-button id="buttonLoad1" label="Bloquear Tela">
+                </bradesco-input-button>
+                <bradesco-input-button id="buttonLoad2" label="Bloquear Botao sem LOAD">
+                </bradesco-input-button>
+                <bradesco-input-button id="buttonLoad3" label="Bloquear Botao">
+                </bradesco-input-button>
+                <bradesco-select-underline id="ppais" label="Pais" tab-index="1">
+                </bradesco-select-underline>
+                <bradesco-container title="container" id="container" collapsible="true">
+                    <a>h1</a>
+                    <a>h2</a> <a>teste</a>
+                </bradesco-container>
+            </bradesco-box>
+        </bradesco-content>
+    </bradesco-page>
+    <!-- Dependencia dos componentes -->    
+    <script type="text/javascript" src="vendor/webcomponents.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="object/bra-1-fix/js/bra-1-fix-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-communication.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-utils.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/2-bra-pmb-communication-ajax.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/99-bra-pmb.js"></script>
+    <!-- Componentes utilizados -->    
+    <script type="text/javascript" src="object/bra-content/js/bra-content-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-page/js/bra-page-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-input-button/js/bra-input-button-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-select-underline/js/bra-select-underline-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-block/js/bra-block-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-box/js/bra-box-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-container/js/bra-container-1.0.0.js"></script>
+    <script>
+    $(document).ready(function() {
+        //Exemplo simples para desabilitar botao
+
+        $("#buttonLoad1").on("tap", function(e) {
+            console.log("FOI");
+            $("bradesco-page").block({
+                // "text": "Carregando página <span id='teste'></span>"
+                transparency: false
+            });
+
+            // $("#teste").text("1%");
+            
+            // setTimeout(function() {
+            //     $("bradesco-page").unblock();
+            // }, 3000);
+
+        });
+
+        //Exemplo simples para desabilitar botao
+        $("#buttonLoad2").on("tap", function(e) {
+            console.log("FOI");
+            $(this).block({
+                "showLoading": false
+            });
+
+            setTimeout(function() {
+                $("#buttonLoad2").unblock();
+            }, 3000);
+        });
+
+
+        $("#buttonLoad3").on("tap", function(e) {
+            console.log("FOI");
+            $(this).block();
+
+            setTimeout(function() {
+                $("#buttonLoad3").unblock();
+            }, 3000);
+        });
+
+
+
+        var pais = new Array();
+        pais.push({
+            "nome": "Brasil",
+            "valor": "1"
+        });
+        pais.push({
+            "nome": "Japao",
+            "valor": "2"
+        });
+        pais.push({
+            "nome": "Italia",
+            "valor": "3"
+        });
+
+        //Preenbche combo
+        $("#ppais").fillSelect(pais);
+
+
+        $("#ppais").on("change", function() {
+            $("#ppais").block();
+            setTimeout(function() {
+                $("#ppais").unblock();
+            }, 123000);
+        });
+
+        $("#container").block();
+        setTimeout(function() {
+            $("#container").unblock();
+        }, 123000);
+
+    });
+    </script>
+</body>
+
+</html>

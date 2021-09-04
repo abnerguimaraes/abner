@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+</head>
+
+<body>
+    <ab-page max-request="3">
+        <div>
+            <p>Hello World</p>
+        </div>
+    </ab-page>
+
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">     </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js"> </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"> </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">   </script>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("ab-page").incrementRequest();
+            }, 1000);
+
+            setTimeout(function() {
+                $("ab-page").incrementRequest();
+            }, 2000);
+
+            setTimeout(function() {
+                $("ab-page").incrementRequest();
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
