@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-button/css/ab-button.css">
+</head>
+<body>
+    <ab-page fullscreen="false">
+            <h1>Abner Button</h1>
+            <p>Botão primário</p>
+            <ab-button id="btnPrimario" label="BoTão prImárIo" theme="normal"></ab-button>
+            <p>Botão secundário</p>
+            <ab-button id="btnSecondary" label="Entrar com CPF ou CNPJ" theme="secondary"></ab-button>
+            <p>Botão seletor</p>
+            <ab-button id="nao" label="NÃO" theme="light" width="50%"></ab-button>
+            <ab-button id="sim" label="SIM" theme="dark" width="50%"></ab-button>
+    </ab-page>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">      </script> 
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">  </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"> </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">    </script>
+    <script type="text/javascript" src="object/ab-button/js/ab-button.js">    </script>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        var atributos = new Array();
+        atributos.push({
+            "nome": "Habilitado",
+            "valor": "is-disabled"
+        });
+        atributos.push({
+            "nome": "Desabilitado",
+            "valor": "is-disabled"
+        });
+
+        $("#testevisibility").on("tap", function() {
+            console.log("dsadsa");
+        })
+    
+        $("#nao").on("tap", function() {
+            if ($("#nao").attr("theme") == "light"){
+                $("#nao").attr("theme", "dark");
+                $("#sim").attr("theme", "light");
+            } else {
+                $("#nao").attr("theme", "light");
+                $("#sim").attr("theme", "dark");
+            }
+            console.log("dsadsa");
+        })
+    
+        $("#sim").on("tap", function() {
+            if ($("#sim").attr("theme") == "light"){
+                $("#sim").attr("theme", "dark");
+                $("#nao").attr("theme", "light");
+            } else {
+                $("#sim").attr("theme", "light");
+                $("#nao").attr("theme", "dark");
+            }
+        
+        })
+    
+        //Exemplo simples para desabilitar botao
+        $("#pteste").on("tap", function(e) {
+            e.preventDefault();
+        
+            $(this).attr("is-disabled", "true");
+        
+            //simula uma chamada de ajax e o comando no retorno
+            setTimeout(function() {
+                $("#pteste").removeAttr("is-disabled");
+            }, 2000)
+        });   
+        
+        var applyBtbPrimario = function() {
+            
+        }
+    });
+</script>

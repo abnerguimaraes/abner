@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 const fsExtra = require('fs-extra');
 
 var paths = {
-  scripts: 'www/object/*/js/*.js',
+  scripts: ['www/object/*/js/*.js', 'www/object/ab-support/js/*.js'],
   images:  'www/object/*/img/**',
   css:     'www/object/**/css/*.css',
   fonts:   'www/fonts/*.{ttf,woff,eot,svg}'

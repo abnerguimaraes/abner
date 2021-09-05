@@ -1,13 +1,13 @@
 :root {
     /* cores primárias */
-    --cor-pri: #E1173F;       /* Botão primário, Botão secundário, Icone ilustrativo, Mensagem de erro, Aba, Loader, Paginação, Linha do tempo */
-    --cor-pri-ativa: #AF002B; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
-    --cor-pri-hover: #C50030; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
-    
+    --cor-pri: rgb(48, 96, 167);       /* Botão primário, Botão secundário, Icone ilustrativo, Mensagem de erro, Aba, Loader, Paginação, Linha do tempo */
+    --cor-pri-ativa: rgb(35, 60, 99); /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-pri-hover: rgb(35, 60, 99); /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+
     /* Cores secundárias */
-    --cor-seg: #3B69FF;       /* Botão seletor, pop over */
-    --cor-seg-ativa: #0E24D3; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
-    --cor-seg-hover: #2B469C; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+    --cor-seg: rgb(89, 112, 148);       /* Botão seletor, pop over */
+    --cor-seg-ativa: rgb(66, 83, 110); /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-seg-hover: rgb(66, 83, 110); /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
 
     --cor-seg-destaque: #73308B; /* Gráficos e Texto em destaque */
     --cor-grafico2: #B41A83;     /* Gráficos */
@@ -53,8 +53,9 @@
     --bg-components: #FFFFFF;        /* background para todos os componentes exceto a pagina  */
     --bg-page: #F0F1F5;              /* Planos de fundo */
     --bg-modal: rgba(0, 0, 0, 0.65); /* cor #000000 com trasparência de 65% - Modal fundo */
-    --bg-gradiente-header: linear-gradient(to right, #8E2B40, #542F38);    
-    --bg-gradiente-canal: linear-gradient(44deg, #D90D43, #792038, #2F2F2F);
+    --bg-gradiente-header: linear-gradient(to right, #540dd9, #0a2144);    
+    --bg-gradiente-canal: linear-gradient(44deg, #540dd9, #0a2144, #2F2F2F);
+    
     
     /* Contornos dos componentes */
     --cor-borda: #F0F1F5; /* cor da borda dos componentes */
@@ -87,7 +88,6 @@ html::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(44deg, #540dd9, #0a2144, #2F2F2F);
 }
 
 .html-page-loaded::after {
@@ -101,7 +101,7 @@ body * {
     /*PARA IOS*/
 }
 
-.bradesco-page {
+.ab-page {
     overflow: auto;
     position: relative;
     display: flex;
@@ -109,14 +109,14 @@ body * {
     width: 100%;
     height: 100%;
     background-color: var(--bg-page);
-    font-family: "bradescolinkregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.bradesco-page-error {
+.ab-page-error {
     border: 1px solid var(--cor-noti-erro);
 }
 
-.bradesco-page-loader-wrapper {
+.ab-page-loader-wrapper {
     top:0px;
     left:0px;
     bottom: 0px;
@@ -128,11 +128,11 @@ body * {
     margin: auto;
 }
 
-.bradesco-page-loader {
+.ab-page-loader {
     width: 100%;
     height: 100%;
     display: block;
-    background-image: linear-gradient(44deg, #D90D43, #792038, #2F2F2F);
+    background-image: linear-gradient(44deg, #540dd9, #0a2144, #2F2F2F);
     top:0px;
     left:0px;
     bottom: 0px;
@@ -141,7 +141,7 @@ body * {
     z-index: 150;
 }
 
-.bradesco-page-loader-logo {
+.ab-page-loader-logo {
     background: url(../img/link-loader.svg);
     background-size: 100% ;
     height: 40px;
@@ -150,21 +150,21 @@ body * {
     background-repeat: no-repeat;
 }
 
-.bradesco-page-loader-text {
+.ab-page-loader-text {
     color: #fff;
     text-align: center;
     font-size: 13px;
 }
 
-.bradesco-page-loader-path {
+.ab-page-loader-path {
     width: 200px;
     height: 5px;
-    background: #a1183d;
+    background: #0000;
     border-radius: 2px;
     margin: 20px auto;
 }
 
-.bradesco-page-loader-range {
+.ab-page-loader-range {
     width: 0%;
     height: 5px;
     background: #fff;
@@ -172,7 +172,7 @@ body * {
     transition: width 50ms linear;
 }
 
-.bradesco-page > .bradesco-input-button {
+.ab-page > .ab-input-button {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -192,45 +192,30 @@ body * {
 
 * > H1 {
     font-size: 22px;
-    font-family: 'bradescolinkboldregular';
+    font-family: 'Helvetica';
     line-height: 30pt;
 }
 
 * > H2 {
     font-size: 20px;
-    font-family: 'bradescolinkmedium';
+    font-family: 'Helvetica';
     line-height: 24pt;
 }
 
 * > H3 {
     font-size: 16px;
-    font-family: 'bradescolinksemiboldregular';
+    font-family: 'Helvetica';
     line-height: 20pt;
 }
 
 * > H4 {
     font-size: 14px;
-    font-family: 'bradescolinksemiboldregular';
+    font-family: 'Helvetica';
     line-height: 18pt;
 }
 
-* > .bradesco-paragrafo-medio,
-* > p {
-    display: block;
-    margin: 0px;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-* > .bradesco-paragrafo-medio {
-    font-size: 16px !important;
-    font-family: 'bradescolinkmedium';
-    line-height: 20pt !important;
-    color: var(--cor-pri-text);
-}
-
 * > select {
-    font-family: 'bradescolinkmedium';
+    font-family: 'Helvetica';
     font-size: 16px;
     line-height: 24px;
     color: var(--cor-pri-text);
@@ -238,7 +223,7 @@ body * {
 
 * > p {
     font-size: 14px;
-    font-family: 'bradescolinkmedium';
+    font-family: 'Helvetica';
     line-height: 18pt;
     color: var(--cor-pri-text);
     width: 100%;
@@ -246,7 +231,7 @@ body * {
 
 * > legend {
     font-size: 13px;
-    font-family: 'bradescolinkmedium';
+    font-family: 'Helvetica';
     line-height: 17pt;
     color: var(--cor-seg-text);
     padding: 8px;
@@ -259,7 +244,7 @@ body * {
     text-decoration: none;
     color: var(--cor-seg);
     font-size: 14px;
-    font-family: 'bradescolinksemiboldregular';
+    font-family: 'Helvetica';
     height: 17px;
 }
 
@@ -274,4 +259,18 @@ body * {
 
 * > p > a {
     padding: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    body {
+        height: 100%;
+        margin-left: calc(50vw - 512px)!important;
+        margin-right: calc(50vw - 512px)!important;
+        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        padding: 0;
+        -webkit-text-size-adjust:100%;
+        width: 1024px;
+    }
 }

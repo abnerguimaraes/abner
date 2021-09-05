@@ -56,6 +56,8 @@ class AbPage extends HTMLElement {
             this.style.height = "100%";
             this.style.width = "100%";
             this.style.position = "fixed";
+        } else{
+            $(this).addClass("page--limited");
         }
 
         // Valor padrao
@@ -65,6 +67,8 @@ class AbPage extends HTMLElement {
         if (this.hasAttribute("max-request")) {
             //description: Máximo de requests que terá na página para o loader | Numérico | não | 0 |
             this._createLoader();
+        } else{
+            document.querySelector("html").classList.add("html-page-loaded");
         }
 
     }
@@ -134,7 +138,7 @@ class AbPage extends HTMLElement {
         this.loadBar.appendChild(this.barRange);
 
         this.loadText.classList.add("ab-page-loader-text");
-        this.loadText.innerText = "Aguarde";
+        this.loadText.innerText = "carregando...";
         this.wrapper.appendChild(this.loadText);
     }
 }

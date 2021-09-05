@@ -6,9 +6,32 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
         <title>Showcase Webcomp</title>
+        <link rel="stylesheet" type="text/css" href="../build/css/webcomp.abner.min.css" />
     </head>
 
     <body>
+        
+        <ab-page id="abnerPrincipal" max-request="2" fullscreen="true"> 
+            <ab-button id="btnPrimario" label="Abner btn" theme="normal"></ab-button>
+
+        </ab-page>
+
+        <script type="text/javascript" src="vendor/jquery-3.6.0.min.js"> </script>
+        <script type="text/javascript" src="../build/js/webcomp.abner.min.js"> </script>
+        <script type="text/javascript"> 
+            
+            // fazer o "load" da página
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $("#abnerPrincipal").incrementRequest();
+                }, 1000);
+
+                setTimeout(function() {
+                    $("#abnerPrincipal").incrementRequest();
+                }, 2000);
+            })
+        </script>
+
 
     </body>
 </html>
