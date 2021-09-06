@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-checkbox/css/ab-checkbox.css">
+</head>
+
+<body>
+    <ab-page id ="content">
+            <h1>Checkbox</h1>
+
+                <a id="ateste">teste</a>
+                <ab-checkbox onchange="teste" max-width="50%" position="right" callback="alerta"><a>Enviar</a></ab-checkbox>
+                <ab-checkbox id="subtitle-teste" label="Enviar automaticamente quando conectado"></ab-checkbox>
+                <ab-checkbox max-width="200px">Testes com maximo de tamanho no width. Teste com max  </ab-checkbox>
+                <ab-checkbox max-width="300px" id="check1">Não li mas concordo com o <a id="alink">contrato.</a></ab-checkbox>
+                <ab-checkbox is-checked="true"><br>Enviar automaticamente quando conectado Enviar automaticamente</ab-checkbox>
+                <ab-checkbox is-disabled="true" is-checked="true" label="Enviar assim que possível"></ab-checkbox>
+
+    </ab-page>
+
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">  </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"> </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">    </script>
+    <script type="text/javascript" src="object/ab-checkbox/js/ab-checkbox.js"></script>
+</body>
+
+</html>
+<script>
+
+$(document).ready(function() {
+
+    $("#subtitle-teste").attr("subtitle", "teste@gmaill.teste")
+
+    var check = $("<ab-checkbox/>");
+    check.attr("label","ABNER");
+    check.attr("subtitle","Guimaraes TESTE123");
+    check.appendTo($("#content"));
+    check.attr("max-width", "50%");
+    check.attr("id", "abnerTst");
+    check.attr("is-checked", "neutral");
+    check.attr("onchange", "callTeste");
+
+    var emailChk = $("<ab-checkbox/>");
+    emailChk.attr("label", "Teste");
+    emailChk.attr("subtitle", "teste@mail.com");
+    emailChk.appendTo("#content");
+
+    setTimeout(function() {
+        console.log($("#check1").getNumber());
+    }, 1000);
+
+    //simula uma chamada de ajax e o comando no retorno
+    setTimeout(function() {
+        $("#check1").setNumber(0);
+        console.log($("#check1").getNumber());
+    }, 2000);
+
+    var alerta = function() {
+        console.log(this.attr("position"));
+        alert("Teste");
+    }
+
+    var teste = new Object();
+    teste.lista = new Array();
+
+    teste.lista.push("teste");
+    teste.lista.push("teste");
+    teste.lista.push("teste");
+    teste.lista.push("teste");
+    teste.lista.push("teste");
+
+    console.log(teste);
+
+    $("#check1").off("tap", "A");
+    $("#check1").off("tap", "a");
+    $("#alink").on("tap", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        if ($("#check1").attr("subtitle")) {
+            $("#check1").attr("subtitle", $("#check1").attr("subtitle") + "teste click " );
+        } else {
+            $("#check1").attr("subtitle", "teste click " );
+        }
+    });
+});
+</script>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-text-read-only/css/ab-text-read-only.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-button/css/ab-button.css">
+</head>
+
+<body>
+    <ab-page id="content">
+        <ab-box id="teste-color">
+            O de estrovo foi <span style="color: #dc2d41; font-weight: bold;" >CONTRATADO</span> pelo sistema.
+        </ab-box>
+        <ab-box id="teste-jquery">
+            <p id="mudarTexto"> Sem theme</p>
+        </ab-box>
+        <ab-box id="teste-ativo" theme="flex">
+            <h1>Flex</h1>
+        </ab-box>
+        <ab-box id="teste-ativo" theme="ativo">
+            <h1>ATIVO</h1>
+            <h2>Titulo medio</h2>
+            <p>Teste de texto longo para verificar como fica dentro do card</p>
+            <a>continuar</a>
+            <ab-button id="nao" label="Não exito" theme="light" width="50%"></ab-button>
+            <ab-button id="sim" label="Exito" theme="light" width="50%"></ab-button>
+        </ab-box>
+        <ab-box id="teste-inativo" theme="inativo">
+            <h1>INATIVO</h1>
+            <h2>Titulo medio</h2>
+            <p>Teste de texto longo para verificar como fica dentro do card</p>
+            <a>continuar</a>
+        </ab-box>
+
+        <ab-box theme="dark">
+            <p>Abner Thiago da Silva Guimaraes</p>
+            <p> Ag. 1382 - C/C. 30872-2 </p>
+            <p> pix 11-998-200-240 </p>
+        </ab-box>
+        <ab-box theme="flex">
+            <h3>Teste</h3>
+            <a>Adicionar</a>
+        </ab-box>
+    </ab-page>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js"></script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"></script>
+
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js"></script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js"></script>
+    <script type="text/javascript" src="object/ab-text-read-only/js/ab-text-read-only.js"></script>
+    <script type="text/javascript" src="object/ab-button/js/ab-button.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        var teste = $("<ab-box>");
+        teste.attr("theme", "dark");
+        
+        var texto = $("<p>");
+            texto.html("teste de inclusão dinâmica");
+        texto.appendTo(teste);
+
+        teste.appendTo($("#content"));
+
+
+    });
+    </script>
+</body>
+
+</html>

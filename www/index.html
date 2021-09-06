@@ -13,6 +13,13 @@
         
         <ab-page id="abnerPrincipal" max-request="2" fullscreen="true"> 
             <ab-button id="btnPrimario" label="Abner btn" theme="normal"></ab-button>
+            <ab-checkbox onchange="teste" max-width="50%" position="right" callback="alerta" label="Check box"></ab-checkbox>
+
+            <ab-box theme="inativo">
+                <p> ab-box inativo </p>
+            </ab-box>
+
+            <ab-text-read-only>Este é um ab-text-read-only</ab-text-read-only>
 
         </ab-page>
 
@@ -28,7 +35,7 @@
 
                 setTimeout(function() {
                     $("#abnerPrincipal").incrementRequest();
-                }, 2000);
+                }, 1000);
             })
         </script>
 

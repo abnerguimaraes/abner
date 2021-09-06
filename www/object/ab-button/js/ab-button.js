@@ -3,21 +3,9 @@
 $(document).ready(function () {
     $(window).on("resize", function () {
         $("ab-page").find("ab-button").each(function () {
-            if ($("ab-page").attr("fullscreen") == "true"){
-                if ($(this).attr("width-on-bigscreen")) {
-                    $(this).css("width", $(this).attr("width-on-bigscreen"));
-                } else {
-                    if ($(this).attr("max-width")) {
-                        $(this).css("max-width", $(this).attr("max-width"));
-                    } else {
-                        $(this).css("max-width", "340px");
-                    }
-                }
-            } else {
-                $(this).css("max-width", "100%");
-                if ($(this).attr("width")) {
-                    $(this).css("width", $(this).attr("width"));
-                }
+            $(this).css("max-width", "100%");
+            if ($(this).attr("width")) {
+                $(this).css("width", $(this).attr("width"));
             }
         });
     });

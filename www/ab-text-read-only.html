@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-text-read-only/css/ab-text-read-only.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+</head>
+
+<body>
+    <ab-page>
+       /h1>
+            <ab-box id="content">
+                <ab-text-read-only width="50%" label="Texto" id="ptext1" theme="bottom-label">
+                </ab-text-read-only>
+                <ab-text-read-only width="100%" label="Testando formatar telefone" id="ptext2">5511998854411
+                </ab-text-read-only>
+                <ab-text-read-only label="Testando quebra de linha" id="ptext3">Rua Fire 1337
+                    <BR>São Paulo / SP
+                </ab-text-read-only>
+                <ab-text-read-only label="Testando icon button" id="ptext4">
+                    <ab-icon-button width="26px" height="26px" icon-height="15px"
+                        class="ab-text-read-only-icon"></ab-icon-button>
+                    <ab-icon-button width="26px" height="26px" icon-height="15px"
+                        class="ab-text-read-only-icon"></ab-icon-button>Teste Teste Teste Teste Teste Teste
+                    Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
+                    Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
+                    Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
+                    Teste Teste Teste Teste Teste
+                </ab-text-read-only>
+                <ab-text-read-only label="Celular">+55 (11) 99878 9098
+                </ab-text-read-only>
+                <a>edit</a>
+            </ab-box>
+            <ab-box>
+                <ab-text-read-only label="Teste coluna" theme="bold" width-on-bigscreen="33%">Teste coluna
+                </ab-text-read-only>
+                <ab-text-read-only label="Teste coluna" theme="smart" width-on-bigscreen="33%">Teste coluna
+                </ab-text-read-only>
+                <ab-text-read-only label="Teste coluna" theme="smart" width-on-bigscreen="33%">Teste coluna
+                </ab-text-read-only>
+            </ab-box>
+
+    </ab-page>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js"></script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"></script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js"></script>
+    <script type="text/javascript" src="object/an-text-read-only/js/ab-text-read-only.js"></script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js"></script>
+
+</body>
+<script>
+    $(document).ready(function () {
+        var readOnly = $("<ab-text-read-only/>");
+        readOnly.attr("theme", "big-label");
+        readOnly.attr("label", "teste label");
+        readOnly.attr("width", "50%");
+        readOnly.setText("teste texto");
+        readOnly.appendTo($("#content"));
+
+        var readOnly2 = $("<ab-text-read-only/>");
+        readOnly2.attr("theme", "big-label");
+        readOnly2.attr("width", "50%");
+        readOnly2.setText("teste texto");
+        readOnly2.appendTo($("#content"));
+
+
+
+    });
+</script>
+
+</html>
