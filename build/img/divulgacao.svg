@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_3388" data-name="Retângulo 3388" width="40" height="40" transform="translate(2540 792)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_de_máscara_2" data-name="Grupo de máscara 2" transform="translate(-2540 -792)" clip-path="url(#clip-path)">
+    <g id="_Alertas_32x32px_Marketing_Dicas" data-name=" Alertas / 32x32px / Marketing &amp; Dicas" transform="translate(2539.082 791.133)">
+      <g id="Group_11" data-name="Group 11" transform="translate(8.179 6)">
+        <path id="Stroke_1" data-name="Stroke 1" d="M0,12.743V6.118C0,2.589,2.193,0,5.642,0h5.7" transform="translate(4.25 2.124)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_3" data-name="Stroke 3" d="M12.745,5.718H2.128A2.125,2.125,0,0,1,.34,2.447,8.2,8.2,0,0,1,2.191.843C2.56.576,2.959.293,3.365,0" transform="translate(0 19.769)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_5" data-name="Stroke 5" d="M.5,1.858V0" transform="translate(12.244 0)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_7" data-name="Stroke 7" d="M2.849,23.363H13.467a2.125,2.125,0,0,0,1.788-3.271,8.2,8.2,0,0,0-1.851-1.6c-.37-.268-.769-.55-1.175-.843a2.134,2.134,0,0,1-.885-1.726v-9.8C11.345,2.589,9.152,0,5.7,0H0" transform="translate(9.895 2.124)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_9" data-name="Stroke 9" d="M10.4,0A5.312,5.312,0,0,1,5.2,4.248,5.311,5.311,0,0,1,0,.008" transform="translate(7.543 25.487)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <path id="Path_5" data-name="Path 5" d="M0,.117A13.142,13.142,0,0,1,9.422,2.479" transform="translate(30.505 6.053) rotate(50)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_5_Copy_2" data-name="Path 5 Copy 2" d="M9.215.153A10.912,10.912,0,0,0,0,2.919" transform="translate(5.074 13.609) rotate(-50)" fill="none" stroke="#73308b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

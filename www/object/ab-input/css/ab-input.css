@@ -34,7 +34,7 @@
 
 .ab-input-underline label,
 .ab-input-underline input {
-    font-family: newjunemediumregular;
+    font-family: "Helvetica";
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -60,7 +60,7 @@
 }
 
 .ab-input-underline label {
-    padding-top: 22px;
+    padding-top: 10px;
     font-size: 13px;
     color: var(--input-label-img);
     z-index: 2;
@@ -105,6 +105,7 @@
 }
 
 .ab-input-underline-min label {
-    /*height: 15px;*/
+    height: 15px;
+    margin-top: 2px;
     padding-top: 0px;
 }

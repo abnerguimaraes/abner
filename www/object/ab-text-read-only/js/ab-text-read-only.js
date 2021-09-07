@@ -1,26 +1,5 @@
 "use strict";
 
-$(document).ready(function () {
-    $(window).on("resize", function () {
-        $("ab-page").find("ab-text-read-only").each(function () {
-            if ($(this).attr("width-on-bigscreen")) {
-                if ($("ab-page").attr("fullscreen") == "true"){
-                    $(this).css("width", $(this).attr("width-on-bigscreen"));
-                    $(this).addClass("bradesco-text-read-only-bigscreen");
-                } else {
-                    $(this).removeClass("bradesco-text-read-only-bigscreen")
-                    if ($(this).attr("width")) {
-                        $(this).css("width", $(this).attr("width"));
-                    } else {
-                        $(this).css("width", "100%");
-                    }
-                }
-            }
-        });
-    });
-});
-
-
 class AbTextReadOnly extends HTMLElement {
 
     constructor() {

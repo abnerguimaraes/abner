@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_3389" data-name="Retângulo 3389" width="40" height="40" transform="translate(2494 792)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_de_máscara_1" data-name="Grupo de máscara 1" transform="translate(-2494 -792)" clip-path="url(#clip-path)">
+    <g id="_Alertas_32x32px_Informativo" data-name=" Alertas / 32x32px / Informativo" transform="translate(2494 792)">
+      <g id="Group_3" data-name="Group 3" transform="translate(-1.177 -2.158)">
+        <path id="Oval" d="M14.961,29.819a14.969,14.969,0,0,0,13.721-8.958c-.254.205,6.106-2.149,6.106-2.149l-4.867-3.8A14.932,14.932,0,0,0,17.728.255,15.094,15.094,0,0,0,14.961,0,14.9,14.9,0,0,0,7.946,28.081" transform="translate(19.042 0.625) rotate(39)" fill="none" stroke="#142eff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8"/>
+        <g id="Group" transform="translate(18.96 13.671)">
+          <g id="Group_2" data-name="Group 2" transform="translate(0)">
+            <path id="Stroke_1" data-name="Stroke 1" d="M.982.555v9.891" transform="translate(0.757 5.77)" fill="none" stroke="#142eff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8"/>
+            <path id="Fill_2" data-name="Fill 2" d="M3.163,1.581A1.581,1.581,0,1,1,1.581,0,1.582,1.582,0,0,1,3.163,1.581" fill="#142eff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

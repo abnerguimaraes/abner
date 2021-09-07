@@ -10,8 +10,16 @@
     </head>
 
     <body>
+
+        <ab-menu id="menu" touch-move="true" animation="push" style="background-color:#1a237e;">
+            MENU
+        </ab-menu>
         
-        <ab-page id="abnerPrincipal" max-request="2" fullscreen="true"> 
+        <ab-page id="abnerPrincipal" max-request="2" fullscreen="true">
+            <ab-header id="menu" position-fixed="true" >
+                <span>abner thiago da silva guimaraes</span>
+            </ab-header>
+
             <ab-button id="btnPrimario" label="Abner btn" theme="normal"></ab-button>
             <ab-checkbox onchange="teste" max-width="50%" position="right" callback="alerta" label="Check box"></ab-checkbox>
 
@@ -27,6 +35,22 @@
 
             <p> Ab-select</p>
             <ab-select width="50%" description="Obrigatorio" id="select1" tab-index="2" onchange=""></ab-select>
+
+            <ab-box>
+                <p> ab-text</p>
+                <ab-text letters-only="true" id="ptext1" no-spaces="true" tab-index="1" maxlength="5" is-required="true" label="Texto obrigatório" onblur="teste" width-on-bigscreen="50%" btnclean="true" description="Abner">
+                </ab-text>
+                <ab-text id="txtBloq" description="Obrigatorio" is-disabled="true" id="ptext2" tab-index="2" label="Texto normal" onblur="testeonblur">
+                </ab-text>
+
+                <p> ab-text-area-underline</p>
+                <ab-text-area-underline id="txtAbner" maxlength="2000" auto-height="true" max-rows="28" onblur="teste"></ab-text-area-underline>
+            </ab-box>
+
+            <ab-box>
+                <p> Modal de comunicaçao</p>
+                <ab-button id="modal" label="Teste o modal"></ab-button>
+            </ab-box>
 
         </ab-page>
 
@@ -53,6 +77,46 @@
                     });
                 }
                 $("#select1").fillSelect(pais, function() { });
+
+                $("#txtBloq").setText("Text fiel disabled");
+
+                //text area
+                $("#txtAbnertxa_input").on("blur", function() {
+                    console.log("THIAGO");
+                });
+
+                var teste = function() {
+                    console.log("ABNER");
+                }
+
+                //modal
+                $("#modal").on("mousedown touchstart", function (e) {
+                    e.preventDefault();
+
+                    var modal = new AbModalUtil();
+                    modal.show({
+                        "type": "orientacao",
+                        "text": "teste de modal",
+                        "maxWidth": "610px",
+                        "buttons": [{
+                            "title": "Fechar",
+                            "callback": function () {
+                            }
+                        }]
+                    });
+                });
+
+                //função que abre/fecha o menu
+                $("ab-header").children().on("tap", function(){
+
+                    //Executa funcao
+                    if ($("ab-menu").attr("visible") == "true") {
+                        $("ab-menu").attr("visible", false);
+                    }else {
+                        $("ab-menu").attr("visible", true);
+                    }
+             
+                });
             
             })
         </script>

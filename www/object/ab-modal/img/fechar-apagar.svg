@@ -1,0 +1,17 @@
+<svg id="a_icone_fechar_apagar" data-name="a/icone/fechar_apagar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M15.2,15.862,8,8.665l-7.2,7.2A.47.47,0,1,1,.138,15.2L7.334,8,.138.8A.47.47,0,0,1,.8.138L8,7.334l7.2-7.2A.47.47,0,1,1,15.862.8L8.665,8l7.2,7.2a.471.471,0,0,1-.666.666Z" fill="#a7a8ac"/>
+    </clipPath>
+  </defs>
+  <path id="Combined_Shape-2" data-name="Combined Shape" d="M15.2,15.862,8,8.665l-7.2,7.2A.47.47,0,1,1,.138,15.2L7.334,8,.138.8A.47.47,0,0,1,.8.138L8,7.334l7.2-7.2A.47.47,0,1,1,15.862.8L8.665,8l7.2,7.2a.471.471,0,0,1-.666.666Z" fill="#a7a8ac"/>
+  <g id="Group_2" data-name="Group 2" clip-path="url(#clip-path)">
+    <g id="Group" transform="translate(-8.443 -8.665)">
+      <rect id="Rectangle" width="15.059" height="15.059" transform="translate(7.502 9.606)" fill="#a7a8ac"/>
+      <g id="color_Fill_nav_icons_499ed0" data-name="color/Fill/nav icons/#499ed0" transform="translate(0 0)">
+        <rect id="color_Fill_nav_icons_499ed0_background" data-name="color/Fill/nav icons/#499ed0 background" width="31.613" height="31.613" fill="#a7a8ac"/>
+        <rect id="Rectangle_11_Copy_2" data-name="Rectangle 11 Copy 2" width="31.613" height="31.613" fill="#a7a8ac"/>
+      </g>
+    </g>
+  </g>
+</svg>

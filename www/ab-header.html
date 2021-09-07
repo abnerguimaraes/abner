@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-button/css/ab-button.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-header/css/ab-header.css">
+</head>
+
+<body>
+    <ab-page>
+        <ab-header id="menu" position-fixed="true" >
+            <span>abner thiago da silva guimaraes</span>
+        </ab-header>
+        
+        <h1>Cabeçalho</h1>
+        <ab-box>
+            <ab-button width="200px" label="ABRE HEADER" id="abre"></ab-button>
+            <ab-button width="200px" label="FECHA HEADER" id="fecha"></ab-button>
+        </ab-box>
+
+    </ab-page>
+
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">           </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">       </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js">      </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">         </script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js">           </script>
+    <script type="text/javascript" src="object/ab-input/js/ab-input.js">       </script>
+    <script type="text/javascript" src="object/ab-button/js/ab-button.js">     </script>
+    <script type="text/javascript" src="object/ab-checkbox/js/ab-checkbox.js"> </script>
+    <script type="text/javascript" src="object/ab-block/js/ab-block.js">       </script>
+    <script type="text/javascript" src="object/ab-text/js/ab-text.js">         </script>
+    <script type="text/javascript" src="object/ab-header/js/ab-header.js">       </script>
+    <script>
+        $(document).ready(function () {
+            //Exemplo simples para desabilitar botao
+            $("#abre").on("mousedown touchstart", function (e) {
+                e.preventDefault();
+
+                //Desabilita botao
+                $(this).attr("disabled", "true");
+
+                //Executa funcao
+                $("ab-header").attr("visible", "true");
+
+                //simula uma chamada de ajax e o comando no retorno
+                $(this).removeAttr("disabled");
+            });
+
+            //Exemplo simples para desabilitar botao
+            $("#fecha").on("mousedown touchstart", function (e) {
+                e.preventDefault();
+
+                //Desabilita botao
+                $(this).attr("disabled", "true");
+
+                //Executa funcao
+                $("ab-header").attr("visible", "false");
+
+                //simula uma chamada de ajax e o comando no retorno
+                $(this).removeAttr("disabled");
+            });
+
+            $("ab-header").children().on("tap", function(){
+                console.log("ABRE O MENU");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

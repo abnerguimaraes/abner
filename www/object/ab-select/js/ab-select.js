@@ -41,7 +41,6 @@ class AbSelect extends HTMLElement {
             this.setAttribute("id", id);
         }
 
-        //Bradesco Container
         this.classList.add(this.mainClass);
 
         //no caso do combo ja fica mimificado

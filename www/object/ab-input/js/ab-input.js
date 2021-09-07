@@ -5,6 +5,8 @@ class AbInput extends HTMLElement {
     constructor() {
         super();
 
+        this.abner = new AbnerUtils();
+
         this.input = document.createElement("input");
         this.label = document.createElement("label");
         this.span = document.createElement("span");
@@ -16,6 +18,7 @@ class AbInput extends HTMLElement {
     }
 
     _render() {
+
         var id = null;
         if (this.getAttribute("id")) {
             id = this.getAttribute("id");
@@ -34,7 +37,7 @@ class AbInput extends HTMLElement {
 
         //Obrigatorio checagem abaixo do width
         if (this.hasAttribute("width-on-bigscreen")) {
-            if (pmb.utils.showBigScreen(top.$("body"))) {
+            if (this.abner.showBigScreen(top.$("body"))) {
                 this.style.width = this.getAttribute("width-on-bigscreen");
             }
         }
@@ -292,7 +295,7 @@ class AbInput extends HTMLElement {
                 break;
 
             case "width-on-bigscreen":
-                if (pmb.utils.showBigScreen(top.$("body"))) {
+                if (this.abner.showBigScreen(top.$("body"))) {
                     this.style.width = newVal;
                 }
                 break;

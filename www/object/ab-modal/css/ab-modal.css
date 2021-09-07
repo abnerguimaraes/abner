@@ -1,0 +1,322 @@
+.ab-modal-success {
+    --img-modal: url(../img/sucesso.svg);
+    --bg-modal: var(--bg-noti-sucesso);
+}
+
+.ab-modal-error {
+    --img-modal: url(../img/erro.svg);
+    --bg-modal: var(--bg-noti-erro);
+}
+
+.ab-modal-alerta {
+    --img-modal: url(../img/aviso.svg);
+    --bg-modal: var(--bg-noti-atencao);
+}
+
+.ab-modal-divulgacao {
+    --img-modal: url(../img/divulgacao.svg);
+    --bg-modal: var(--bg-noti-divulgacao);
+}
+
+.ab-modal-orientacao {
+    --img-modal: url("../img/orientacao.svg");
+    --bg-modal: var(--bg-noti-informacao);
+}
+
+.ab-modal-background {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.ab-modal-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: transparent;
+}
+
+.ab-modal-window {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--bg-components);
+    padding: 40px 16px;
+    z-index: 100;
+    overflow: auto;
+    /* min-height: 354px; */
+    max-height: fit-content;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ab-modal-text-image {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    overflow: auto;
+    height: calc(100% - 140px);
+    height: -moz-calc(100% - 140px);
+    height: -webkit-calc(100% - 140px);
+    color: var(--cor-pri-text);
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+}
+
+.ab-modal-text {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    overflow: auto;
+    height: calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    color: var(--cor-pri-text);
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+}
+
+.ab-modal-icon {
+    display: block;
+    background-image: var(--img-modal);
+    background-color: var(--bg-modal);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    margin: 8px 0px 24px 0px;
+}
+
+.ab-modal-icon + .ab-modal-title {
+    width: unset;
+}
+
+.ab-modal-title {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 0px 8px 24px 8px;
+    background-color: var(--bg-components);
+    color: var(--cor-titulo);
+    font-family: 'Helvetica';
+    font-weight: "normal";
+    overflow: visible;
+}
+
+.ab-modal-icon + .ab-modal-span {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ab-modal-icon + .ab-modal-title + .ab-modal-span {
+    text-align: center;
+}
+
+.ab-modal-title + .ab-modal-span {
+    text-align: left;
+}
+
+.ab-modal-span {
+    display: block;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+    font-size: 14px;
+    line-height: 18pt;
+    width: 100%;
+    max-height: 290px;
+    padding: 0px 8px;
+    margin-bottom: 16px;
+    overflow: scroll;
+    color: var(--cor-pri-text);
+    -webkit-overflow-scrolling: touch;
+}
+
+.ab-icon-button-seta {
+    height: 60px !important;
+    background-size: 20px !important;
+    float: right !important;
+    background-image: url(../img/icons/icone_seta.png) !important;
+}
+
+.ab-modal-list-title {
+    color: var(--cor-pri) !important;
+    font-family: 'Helvetica';
+    font-weight: "normal";
+}
+
+.ab-modal-list {
+    display: table;
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    border-top: 1px solid #c4c4c4;
+    text-align: left;
+    font-size: 16px;
+    /*padding-left: 15px;*/
+    background-color: var(--bg-components);
+    height: 60px;
+    float: left;
+    table-layout: fixed;
+    margin: 0 15px;
+}
+
+.ab-modal-list span {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 85%;
+    font-family: 'Helvetica';
+    font-weight: normal;
+    color: #3e4049;
+    font-size: 14px;
+    padding: 15px 0px;
+}
+
+.ab-modal-list:last-of-type {
+    margin-bottom: 32px;
+}
+
+.ab-modal-list p {
+    margin: 1px 0 0 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: 'Helvetica';
+    padding: 0px;
+}
+
+.ab-icon-button-fechar {
+    background-image: url("../img/icons/fechar_modal.png");
+    height: 55px;
+    float: right !important;
+    margin: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.modal-checkbox {
+    margin: 0 7px 0 7px;
+    width: -webkit-calc(100% - 14px) !important;
+    width: -moz-calc(100% - 14px) !important;
+    width: -o-calc(100% - 14px) !important;
+    width: calc(100% - 14px) !important;
+}
+
+.ab-modal-window,
+.ab-modal-title {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.ab-modal-promocional-content,
+.ab-modal-tela-window {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 24px 24px 40px 24px;
+    background-color: var(--bg-components);
+}
+
+.ab-modal-promocional-close {
+    margin-bottom: 24px;
+    font: icon;
+    color: var(--cor-seg);
+    align-self: flex-start;
+}
+
+.ab-modal-promocional-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0px 32px 32px 32px;
+    width: calc(100% - 112px);
+}
+
+.ab-modal-promocional-title {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Helvetica';
+}
+
+.ab-modal-promocional-text {
+    height: calc(100% - 374px);
+    overflow: auto;
+    margin: 0;
+    /* solicitado pelo CDEC font fora do guia deveria ser 14px */
+    font-size: 16px;
+    font-family: 'Helvetica';
+    color: var(--cor-pri-text);
+    line-height: 18px;
+    text-align: center;
+}
+
+.ab-modal-promocional-button {
+    padding: 24px 0px 0px 0px;
+}
+
+.ab-modal-tela-close {
+    margin-bottom: 8px;
+    font: icon;
+    color: var(--cor-seg);
+    align-self: flex-start;
+}
+
+.ab-modal-tela-title {
+    padding: 16px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 56px;
+    font-size: 14px;
+    font-family: 'Helvetica';
+    line-height: 18pt;
+}
+
+.ab-modal-tela-title h4 {
+    padding: 0px;
+}
+
+.ab-modal-tela-content {
+    box-sizing: border-box;
+    overflow: auto;
+    height: calc(100% - 146px);
+    margin-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Helvetica'
+}
+
+.ab-modal-tela-buttons {
+    width: 100%;
+    box-sizing: border-box;
+}

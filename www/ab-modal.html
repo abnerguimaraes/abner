@@ -9,53 +9,40 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
     <title>Exemplo</title>
-    <link rel="stylesheet" type="text/css" href="object/bra-page/css/bra-page-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-content/css/bra-content-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-box/css/bra-box-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-input-button/css/bra-input-button-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-icon-button/css/bra-icon-button-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-input-checkbox/css/bra-input-checkbox-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-text-area-underline/css/bra-text-area-underline-1.0.0.css">
-    <link rel="stylesheet" type="text/css" href="object/bra-modal/css/bra-modal-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-button/css/ab-button.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-checkbox/css/ab-checkbox.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-text-area-underline/css/ab-text-area-underline.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-modal/css/ab-modal.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-    <bradesco-page>
-        <bradesco-content>
+    <ab-page>
             <h1>Modal</h1>
-            <bradesco-box>
-                <bradesco-input-button id="teste1" label="CONFIRMAÇÃO/SUCCESS"></bradesco-input-button>
-                <bradesco-input-button id="teste2" label="PERGUNTA/ERROR"></bradesco-input-button>
-                <bradesco-input-button id="teste3" label="Alerta"></bradesco-input-button>
-                <bradesco-input-button id="teste4" label="Orientação"></bradesco-input-button>
-                <bradesco-input-button id="teste5" label="Divulgação"></bradesco-input-button>
-                <bradesco-input-button id="teste6" label="com icon e title"></bradesco-input-button>
-                <bradesco-input-button id="teste7" label="LISTA NOVA"></bradesco-input-button>
-                <bradesco-input-button id="teste8" label="Teste 04"></bradesco-input-button>
-                <bradesco-input-button id="teste9" label="Promocional"></bradesco-input-button>
-                <bradesco-input-button id="teste10" label="Modal Bia"></bradesco-input-button>
-            </bradesco-box>
-        </bradesco-content>
-    </bradesco-page>
-    <!-- Dependencia dos componentes -->
-    <script type="text/javascript" src="vendor/webcomponents.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="object/bra-1-fix/js/bra-1-fix-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-communication.js"></script>
-    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-utils.js"></script>
-    <script type="text/javascript" src="object/bra-pmb-functions/js/2-bra-pmb-communication-ajax.js"></script>
-    <script type="text/javascript" src="object/bra-pmb-functions/js/99-bra-pmb.js"></script>
-    <!-- Componentes utilizados -->
-    <script type="text/javascript" src="object/bra-page/js/bra-page-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-content/js/bra-content-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-box/js/bra-box-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-input-button/js/bra-input-button-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-icon-button/js/bra-icon-button-1.0.0.js"></script>icon
-    <script type="text/javascript" src="object/bra-input-checkbox/js/bra-input-checkbox-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-text-area-underline/js/bra-text-area-underline-1.0.0.js"></script>
-    <script type="text/javascript" src="object/bra-modal/js/bra-modal-1.0.0.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+            <ab-box>
+                <ab-button id="teste1" label="CONFIRMAÇÃO/SUCCESS"></ab-button>
+                <ab-button id="teste2" label="PERGUNTA/ERROR"></ab-button>
+                <ab-button id="teste3" label="Alerta"></ab-button>
+                <ab-button id="teste4" label="Orientação"></ab-button>
+                <ab-button id="teste5" label="Divulgação"></ab-button>
+            </ab-box>
+    </ab-page>
+
+    <script type="text/javascript" src="object/ab-text-area-underline/js/ab-text-area-underline.js"></script>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">           </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">       </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js">      </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">         </script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js">           </script>
+    <script type="text/javascript" src="object/ab-input/js/ab-input.js">       </script>
+    <script type="text/javascript" src="object/ab-button/js/ab-button.js">     </script>
+    <script type="text/javascript" src="object/ab-checkbox/js/ab-checkbox.js"> </script>
+    <script type="text/javascript" src="object/ab-block/js/ab-block.js">       </script>
+    <script type="text/javascript" src="object/ab-text/js/ab-text.js">         </script>
+    <script type="text/javascript" src="object/ab-modal/js/ab-modal.js">       </script>
+    <script type="text/javascript" src="js/index.js">                          </script>
 
     <script>
         $(document).ready(function () {
@@ -63,7 +50,7 @@
             $("#teste1").on("mousedown touchstart", function (e) {
                 e.preventDefault();
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
 
                 modal.show({
                     "type": "success",
@@ -81,10 +68,11 @@
 
                 msg = "Algo deu errado.";
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "type": "error",
                     "text": msg,
+                    "maxWidth": "400px",
                     "buttons": [{
                         "title": "SIM",
                         "callback": function() {
@@ -104,7 +92,7 @@
 
                 msg = "Verificar a sua senha.";
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "type": "alerta",
                     "text": "mensgem de alerta",
@@ -121,7 +109,7 @@
 
                 msg = "As notificações estão no menu notificações.";
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "type": "orientacao",
                     "text": msg,
@@ -138,7 +126,7 @@
 
                 msg = "Esses são os novos tipos de modais com icones";
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "type": "divulgacao",
                     "text": msg,
@@ -154,7 +142,7 @@
             $("#teste6").on("mousedown touchstart", function (e) {
                 e.preventDefault();
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
 
                 modal.show({
                     "title": "Titulo do Modal",
@@ -172,7 +160,7 @@
             $("#teste7").on("mousedown touchstart", function (e) {
                 e.preventDefault();
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "title": "Selecione o Tipo de Endereço de Endereço",
                     "list": [{
@@ -191,7 +179,7 @@
             $("#teste8").on("mousedown touchstart", function (e) {
                 e.preventDefault();
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "title": "Selecione o Tipo de Endereço de Endereço",
                     "closable": "true",
@@ -266,37 +254,15 @@
             $("#teste9").on("mousedown touchstart", function (e) {
                 e.preventDefault();
 
-                var modal = new BraModalUtil();
+                var modal = new AbModalUtil();
                 modal.show({
                     "type": "promocional",
                     // "title": "Titulo do modal Promocional",
                     "title": "",
                     "imgPromo": "../www/object/bra-modal/img/computador.png",
-                    "text": "Para concluir a contratação de Previdência, o cliente deve realizar a aprovação via aceite digital no App Bradesco ou Internet Banking.<BR><BR>Teste de quebra de linha",
+                    "text": "Para concluir a contratação com o diabo, assine sem ver.<BR><BR>Teste de quebra de linha",
                     "buttons": [{
                         "title": "FECHAR",
-                        "callback": function () {
-                            console.log("fechou");
-                        }
-                    }]
-                });
-            });
-
-            $("#teste10").on("mousedown touchstart", function (e) {
-                // e.preventDefault();
-
-                var modal = new BraModalUtil();
-                modal.show({
-                    "type": "tela",
-                    "title": "Aqui vão as estrelas",
-                    "text":  '<div style="height: 100%; box-sizing: border-box; width: 100%; float: left; padding-bottom: 15px;"><span id="12011219344685-textModal" style="width: 100%; text-align: center; float: left; font-weight: bold;">Obrigado por fazer a BIA aprender mais!</span><span id="12011219344685-textModal" style="width: 100%; text-align: center; float: left; font-weight: bold; padding: 8px; font-size: 18px; box-sizing: border-box;">Digite abaixo sua mensagem para ajudar a BIA a aprender:</span><bradesco-text-area-underline name="feedback" maxlength="1000" id="textarea-modal" max-rows="5" rows="5" style="font-size: 18px; width: 100%; margin: 0px; height: 120px; resize: none; box-sizing: border-box; margin-bottom: 20px;"></bradesco-text-area-underline><span style="color: var(--cor-noti-erro); font-size: 11px; padding-left: 8px;" id="spanError"></span></div>',
-                    "buttons": [{
-                        "title": "Confirmar",
-                        "callback": function () {
-                            console.log("fechou");
-                        }
-                    }, {
-                        "title": "Voltar",
                         "callback": function () {
                             console.log("fechou");
                         }

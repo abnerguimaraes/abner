@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_3397" data-name="Retângulo 3397" width="40" height="40" transform="translate(2356 792)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_de_máscara_10" data-name="Grupo de máscara 10" transform="translate(-2356 -792)" clip-path="url(#clip-path)">
+    <g id="_Alertas_48x48px_Sucesso" data-name=" Alertas / 48x48px / Sucesso" transform="translate(2357.437 793.437)">
+      <g id="Group" transform="translate(5 5)">
+        <path id="Stroke_1" data-name="Stroke 1" d="M0,8.185l4.534,4.821a1.856,1.856,0,0,0,2.74,0L19.506,0" transform="translate(3.918 5.767)" fill="none" stroke="#11c25d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_3" data-name="Stroke 3" d="M0,15.5V1.938A1.938,1.938,0,0,1,1.938,0H25.189a1.938,1.938,0,0,1,1.938,1.938V19.329" transform="translate(0 0)" fill="none" stroke="#11c25d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_5" data-name="Stroke 5" d="M10.628,11.626H1.938A1.938,1.938,0,0,1,0,9.688V0" transform="translate(0 15.501)" fill="none" stroke="#11c25d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Stroke_7" data-name="Stroke 7" d="M10.686,0V5.861A1.938,1.938,0,0,1,8.748,7.8H0" transform="translate(16.441 19.329)" fill="none" stroke="#11c25d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

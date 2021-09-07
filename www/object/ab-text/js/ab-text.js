@@ -1,13 +1,14 @@
 "use strict";
 
-//component-wrapper: bradesco-input-text-underline
-class BraInputTextUnderline extends BraInput {
+class AbText extends AbInput {
 
     constructor() {
         super();
 
-        this.childClass = "bradesco-input-text-underline";
+        this.childClass = "ab-text";
         this.errorChild = false;
+
+        this.abner = new AbnerUtils();
 
         this._addEventChild();
     }
@@ -20,13 +21,14 @@ class BraInputTextUnderline extends BraInput {
     _addEventChild() {
         var input = $(this.input);
         var _this = this;
+        var abner = new AbnerUtils();
 
         //evento change quando alterar o valor do input
         input.on("change", function (e) {
             e.preventDefault();
 
             if (_this.getAttribute("letters-only") == "true" && this.value.length > 0) {
-                var text = pmb.utils.removeAccent(this.value);
+                var text = abner.removeAccent(this.value);
                 this.value = text;
                 var textmatch = this.value.match(/^[A-Za-z ]+$/);
                 if (textmatch == null) {
@@ -62,4 +64,4 @@ class BraInputTextUnderline extends BraInput {
 
 }
 
-customElements.define('bradesco-input-text-underline', BraInputTextUnderline);
+customElements.define('ab-text', AbText);

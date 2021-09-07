@@ -1,0 +1,109 @@
+.ab-text-area-underline {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+}
+
+.ab-text-area-underline label,
+.ab-text-area-underline textarea,
+.ab-text-area-underline span {
+    font-family: 'Helvetica';
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.ab-text-area-underline textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--cor-seg);
+}
+
+.ab-text-area-underline textarea:disabled {
+    -webkit-text-fill-color: var(--cor-desabilitado);
+    -webkit-opacity: 1;
+    color: var(--cor-desabilitado);
+}
+
+.ab-text-area-underline label {
+    position: absolute;
+    font-size: 13px;
+    color: var(--cor-seg-text);
+    z-index: 2;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform: rotateZ(0);
+    -webkit-transition: all 120ms linear;
+    -moz-transition: all 120ms linear;
+    -o-transition: all 120ms linear;
+    transition: all 120ms linear;
+    top: 10px;
+    margin: 0px 8px 0px 8px;
+}
+
+.ab-text-area-underline textarea {
+    width: calc(100% - 12px);
+    display: block;
+    resize: none;
+    z-index: 1;
+    background-color: transparent;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: var(--cor-pri-text);
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid var(--cor-linha);
+    margin: 8px 8px 8px 8px;
+    padding-bottom: 4px;
+}
+
+.ab-text-area-underline span {
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    color: var(--cor-seg-text);
+    font-size: 13px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+.ab-text-area-underline img {
+    height: 20px !important;
+    width: 20px !important;
+    position: absolute;
+    top: 25px;
+    left: 14px;
+}
+
+.ab-text-area-underline-min textarea {
+    margin-top: 18px;
+}
+
+.ab-text-area-underline-min label {
+    top: 2px;
+}
+
+.ab-text-area-underline-error label,
+.ab-text-area-underline-error span {
+    color: var(--cor-noti-erro) !important;
+}
+
+.ab-text-area-underline-error textarea {
+    border-bottom: 2px solid var(--cor-pri) !important;
+}
+
+.ab-text-area-underline textarea:focus + label {
+    color: var(--cor-seg);
+}
+
+.ab-text-area-underline textarea:focus {
+    z-index: 3;
+    height: 100%;
+}

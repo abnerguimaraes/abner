@@ -376,7 +376,7 @@ $(document).ready(function () {
             tag += $(this)[0].nodeName;
             if (tag) {
                 tag = tag.toUpperCase().startsWith("AB-INPUT") ? "AB-INPUT" : tag.toUpperCase();
-                var tagsAceitas = ["AB-TEXT-READ-ONLY", "AB-TEXT-AREA-UNDERLINE", "AB-SELECT-UNDERLINE", "AB-INPUT"];
+                var tagsAceitas = ["AB-TEXT-READ-ONLY", "AB-TEXT-AREA-UNDERLINE", "AB-SELECT", "AB-INPUT", "AB-TEXT", "AB-RADIO"];
                 if (tagsAceitas.indexOf(tag) == -1) {
                     return null;
                 }
@@ -418,6 +418,12 @@ $(document).ready(function () {
             this[0].setText(text);
 
         } else if (tag.startsWith("AB-INPUT")) {
+            this[0].setText(text);
+
+        } else if (tag.startsWith("AB-TEXT")) {
+            this[0].setText(text);
+
+        } else if (tag.startsWith("AB-RADIO")) {
             this[0].setText(text);
 
         } else if (tag == "AB-TEXT-AREA-UNDERLINE") {
