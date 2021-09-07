@@ -25,6 +25,9 @@
             <ab-radio id="radio2" name="radioTeste">Abner Front-end developer</ab-radio>
             <ab-radio id="radio3" name="radioTeste">Abner Back-end developer </ab-radio>
 
+            <p> Ab-select</p>
+            <ab-select width="50%" description="Obrigatorio" id="select1" tab-index="2" onchange=""></ab-select>
+
         </ab-page>
 
         <script type="text/javascript" src="vendor/jquery-3.6.0.min.js"> </script>
@@ -40,6 +43,17 @@
                 setTimeout(function() {
                     $("#abnerPrincipal").incrementRequest();
                 }, 1000);
+
+                //preenche o select
+                var pais = [];
+                for (var i = 0; i < 10; i++) {
+                    pais.push({
+                        "nome": "Brasil",
+                        "valor": "1"
+                    });
+                }
+                $("#select1").fillSelect(pais, function() { });
+            
             })
         </script>
 

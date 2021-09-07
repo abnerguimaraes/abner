@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-input/css/ab-input.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-text/css/ab-text.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-select/css/ab-select.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-button/css/ab-button.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-block/css/ab-block.css">
+</head>
+
+<body>
+    <ab-page>
+        <h1>Combo de seleção</h1>
+        <ab-box id="content">
+            <ab-select width="50%" tab-index="1"></ab-select>
+            <ab-select width="50%" label="pais" description="Obrigatorio" id="select1" tab-index="2" onchange="">
+            </ab-select>
+            <ab-select id="select2" label="Estado" tab-index="3" description="teste">
+            </ab-select>
+            <ab-select id="select3" label="Cidade" tab-index="3" is-required="true">
+            </ab-select>
+        </ab-box>
+
+    </ab-page>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">       </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">   </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">     </script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js">       </script>
+    <script type="text/javascript" src="object/ab-select/js/ab-select.js"> </script>
+    <script type="text/javascript" src="object/ab-input/js/ab-input.js">   </script>
+    <script type="text/javascript" src="object/ab-button/js/ab-button.js"> </script>
+    <script type="text/javascript" src="object/ab-block/js/ab-block.js"> </script>
+
+</body>
+<script>
+$(document).ready(function() {
+    var pais = new Array();
+
+    for (var i = 0; i < 10; i++) {
+        pais.push({
+            "nome": "Brasil",
+            "valor": "1"
+        });
+    }
+    $("#select1").fillSelect(pais, function() { });
+
+
+    window.povoaEstado = function() {
+        //Faz uma consulta e preenche os dados
+        var estado = new Array();
+        estado.push({
+            "nome": "Sao Paulo",
+            "valor": "1"
+        });
+        //Preenche select
+        $("#select2").fillSelect(estado);
+    }
+
+    window.povoaCidade = function() {
+        //Verificando valor
+
+        //FAz uma consulta e preenche os dados
+        var cidade = new Array();
+        cidade.push({
+            "nome": "Barueri",
+            "valor": "1"
+        });
+        cidade.push({
+            "nome": "Sao Paulo",
+            "valor": "2"
+        });
+        cidade.push({
+            "nome": "Osasco",
+            "valor": "3"
+        });
+
+        //Preenche select
+        $("#select3").fillSelect(cidade);
+    }
+
+    var select = $("<ab-select />");
+    select.attr("id", "testeDinamico");
+    select.attr("description", "Teste");
+    select.attr("is-required", "true");
+    select.attr("tab-index", "4");
+    select.attr("goto-tab-index", "1");
+    select.attr("label", "Dinamico Teste");
+    select.appendTo($("#content"));
+
+    povoaCidade();
+});
+</script>
+
+</html>
