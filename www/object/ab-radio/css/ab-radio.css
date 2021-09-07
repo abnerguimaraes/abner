@@ -1,0 +1,108 @@
+.ab-radio {
+    display: grid;
+    grid-template-columns: 18px auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 8px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    padding: 8px;
+    float: left;
+    cursor: pointer;
+    /* align-items: center; */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.ab-radio-radiospace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cor-seg);
+    background-color: var(--bg-components);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    z-index: 11;
+}
+
+.ab-radio input:checked ~ .ab-radio-radiospace:after {
+    display: block;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: var(--bg-components);
+    content: "";
+}
+
+.ab-radio input:checked ~ .ab-radio-radiospace {
+    background-color: var(--cor-seg);
+}
+
+.ab-radio-input {
+    /* deixar o input na primeira coluna da segunda linha */
+    grid-column-start: 1;
+    grid-row-start: 2;
+    opacity: 0;
+}
+
+.ab-radio-disabled .ab-radio-title,
+.ab-radio-disabled .ab-radio-subtitle {
+    color: var(--cor-desabilitado);
+}
+
+.ab-radio-disabled .ab-radio-radioinput {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
+
+.ab-radio-title {
+    font-family: 'Helvetica';
+    word-break: break-word;
+    font-size: 14px;
+    line-height: 1;
+    padding-top: 2px;
+    color: #47484c;
+    z-index: 12;
+}
+
+.ab-radio input:checked ~ .ab-radio-title,
+.ab-radio input:checked ~ .ab-radio-title a {
+    font-family: 'Helvetica';
+}
+
+.ab-radio input:checked ~ .ab-radio-title {
+    color: #000000;
+}
+
+.ab-radio-subtitle {
+    font-family: 'Helvetica';
+    word-break: break-word;
+    grid-column-start: 2;
+    font-size: 14px;
+    color: #47484c;
+}
+
+.ab-radio-title > a,
+.ab-radio-title > a > *,
+.ab-radio-subtitle > a,
+.ab-radio-subtitle > a > * {
+    padding: 0px;
+}
+
+.ab-radio-title > p > a,
+.ab-radio-subtitle > p > a {
+    padding: 0px;
+}

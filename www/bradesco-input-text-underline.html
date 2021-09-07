@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/bra-block/css/bra-block-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-page/css/bra-page-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-content/css/bra-content-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-box/css/bra-box-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-input/css/bra-input-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="object/bra-input-text-underline/css/bra-input-text-underline-1.0.0.css">
+</head>
+
+<body>
+    <bradesco-page>
+        <bradesco-content>
+            <h1>Campo Alfanumérico</h1>
+            <bradesco-box>
+                <bradesco-input-text-underline letters-only="true" id="ptext1" no-spaces="true" tab-index="1" maxlength="5" is-required="true" label="Texto required" onblur="teste" width-on-bigscreen="50%" btnclean="true" description="teste">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline description="Obrigatorio" is-disabled="true" id="ptext2" tab-index="2" label="Texto normal" onblur="testeonblur">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext3" tab-index="3">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext4" tab-index="4" icon="img/icon_folder.png" color="lightblue">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext5" tab-index="5" is-required="true" icon-left="img/icon_folder.png" error-icon="img/logo.png" label="Texto required com icon erro">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext6" tab-index="6" is-disabled="true" icon-rifht="img/icon_folder.png" label="Texto auto-fill & bloqued" btnclean="true">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext7" tab-index="7" icon-left="img/icon_folder.png" icon-right="img/icon_folder.png" label="Texto c/ limit" width="50%" maxlength="10">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext8" tab-index="8" icon="img/icon_folder.png" label="Texto 8" width="50%" maxlength="10" btnclean="true">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext9" is-disabled="true" tab-index="9" maxlength="5" label="Texto required max-width" onblur="teste" max-width="200px">
+                </bradesco-input-text-underline>
+                <bradesco-input-text-underline id="ptext10" tab-index="10" label="Texto normal max-width" max-width="250px">
+                </bradesco-input-text-underline>
+            </bradesco-box>
+        </bradesco-content>
+    </bradesco-page>
+    <!-- Dependencia dos componentes -->
+    <script type="text/javascript" src="vendor/webcomponents.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="object/bra-1-fix/js/bra-1-fix-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-communication.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/1-bra-pmb-utils.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/2-bra-pmb-communication-ajax.js"></script>
+    <script type="text/javascript" src="object/bra-pmb-functions/js/99-bra-pmb.js"></script>
+    <!-- Componentes utilizados -->
+    <script type="text/javascript" src="object/bra-block/js/bra-block-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-page/js/bra-page-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-content/js/bra-content-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-box/js/bra-box-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-input/js/bra-input-1.0.0.js"></script>
+    <script type="text/javascript" src="object/bra-input-text-underline/js/bra-input-text-underline-1.0.0.js"></script>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#ptext2").setText("Texto");
+        $("#ptext3").setText("sem img/label");
+        $("#ptext3").attr("sub-label", "teste sublabel");
+        $("#ptext4").setText("s/label c/cor");
+        $("#ptext6").setText("Vestibulum ante ipsum primis in faucibus");
+        $("#ptext8").setText("Vestibulum");
+        console.log($("#ptext8").getText());
+    
+        var teste = "Argentina ernesto";
+        var teste2 = "rg sem o numero do cpf rne s.a.";
+    
+        console.log(teste.toUpperOnlyFirstLetter());
+        console.log(teste2.toUpperOnlyFirstLetter());
+    
+        //criando dinamicamente o input-text
+        var inputNome = $("<bradesco-input-text-underline/>");
+        inputNome.attr("id", "idNome");
+        inputNome.attr("label", "Nome");
+        inputNome.attr("is-disabled", "false");
+        inputNome.attr("width", "50%");
+        inputNome.attr("tab-index", "11");
+        inputNome.attr("goto-tab-index", "1");
+        inputNome.attr("maxlength", "2");
+        inputNome.setText("Lucas");
+        inputNome.appendTo($("bradesco-box"));
+    
+    
+        var inputNome = $("<bradesco-input-text-underline/>");
+        //var inputNome = document.createElement("bradesco-input-text");
+        inputNome.attr("id", "idNome2");
+        inputNome.attr("label", "Nome2");
+        inputNome.attr("is-disabled", "true");
+        inputNome.attr("width", "50%");
+        inputNome.attr("maxlength", "12");
+        inputNome.attr("error", "teste");
+        inputNome.setText("Lucas2");    
+        inputNome.appendTo($("bradesco-box"));
+    });
+    
+    var teste = function() {
+        $("#ptext3").attr("error", "lucas");
+    
+    }
+    
+    var testeonblur = function(){
+        console.log("on blur");
+    }
+</script>
+</html>

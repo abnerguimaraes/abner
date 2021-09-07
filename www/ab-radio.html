@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';" />
+    <title>Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="object/ab-page/css/ab-page.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-box/css/ab-box.css">
+    <link rel="stylesheet" type="text/css" href="object/ab-radio/css/ab-radio.css">
+</head>
+
+<body>
+    <ab-page>
+        <h1>Radio</h1>
+        <ab-box id="content">
+            <ab-radio id="rdEndereco1" label="Residencial" name="endereco" index="1" subTitle="Av. Franz Voegeli, 900 - Continental - Osasco - SP - CEP 06020-190"></ab-radio>
+            <ab-radio is-checked="true" id="radio1" name="radioTeste"><a>Enviar</a></ab-radio>
+            <ab-radio id="radio2" name="radioTeste">Enviar automaticamente quando conectado</ab-radio>
+            <ab-radio id="radio3" name="radioTeste">Teste Max Width </ab-radio>
+            <ab-radio id="radio4" name="radioTeste" is-disabled="true">Enviar automaticamente </ab-radio>
+            <ab-radio name="radioTeste" is-disabled="true">Enviar automaticamente quando conectado </ab-radio>
+            <ab-radio name="radioTeste" is-disabled="true">Enviar automaticamente quando conectado </ab-radio>
+            <p>
+                <a id="testeTenso">Teste</a>
+            </p>
+        </ab-box>
+    </ab-page>
+    <script type="text/javascript" src="vendor/jquery-3.6.0.min.js">      </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-fix.js">  </script>
+    <script type="text/javascript" src="object/ab-support/js/ab-util.js"> </script>
+    <script type="text/javascript" src="object/ab-page/js/ab-page.js">    </script>
+    <script type="text/javascript" src="object/ab-box/js/ab-box.js">    </script>
+    <script type="text/javascript" src="object/ab-radio/js/ab-radio.js">  </script>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+
+        var abner = new AbnerUtils();
+
+        $("#radio4").setNumber("1");
+        $("#testeTenso").on("tap", function(e) {
+            e.preventDefault();
+
+            var checkedRadio = abner.getCheckedRadio();
+            $("#radio1").setNumber("1");
+            $("#radio1").setText("Setando Text");
+            console.log(checkedRadio.getText());
+            console.log(checkedRadio.getNumber());
+
+        });
+
+        $("#subtitle-teste").attr("subtitle", "abnerguimaraes1983@gmail.teste");
+
+        var check = $("<ab-radio/>");
+        check.attr("max-width", "50%");
+        check.attr("id", "teste");
+        check.attr("is-checked", "true");
+        check.attr("name", "teste");
+        check.setText("TESTE");
+        check.appendTo($("#content"));
+
+        var check1 = $("<ab-radio/>");
+        check1.attr("max-width", "50%");
+        check1.attr("id", "teste1");
+        check1.attr("is-checked", "true");
+        check1.attr("name", "teste");
+        check1.setText("TESTE");
+        check1.appendTo($("#content"));
+
+        var emailChk = $("<ab-radio/>");
+        emailChk.attr("label", "Teste");
+        emailChk.attr("subtitle", "abnerguimaraes1983@gmail.com");
+        emailChk.appendTo("#content");
+
+        var radioChecked = abner.getCheckedRadio();
+
+        for (const radio of radioChecked) {
+            console.log(radio.getText());
+        }
+    });
+</script>

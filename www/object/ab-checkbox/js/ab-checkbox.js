@@ -55,7 +55,7 @@ class AbCheckbox extends HTMLElement {
         //Obrigatorio checagem abaixo do width
         if (this.hasAttribute("width-on-bigscreen")) {
             //description: Define a largura do compenente em telas maiores (afeta somente o espaço que terá para text, não altera o tamanho da checkbox)| % ou px| não| |
-            if (pmb.utils.showBigScreen(top.$("body"))) {
+            if (abner.utils.showBigScreen(top.$("body"))) {
                 this.style.width = this.getAttribute("width-on-bigscreen");
             }
         }
@@ -193,7 +193,7 @@ class AbCheckbox extends HTMLElement {
                 break;
 
             case "width-on-bigscreen":
-                if (pmb.utils.showBigScreen(top.$("body"))) {
+                if (abner.utils.showBigScreen(top.$("body"))) {
                     this.style.width = newVal;
                 }
                 break;

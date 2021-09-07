@@ -122,7 +122,7 @@ class AbButton extends HTMLElement {
         if (this.getAttribute("position") == "center") {
             //values: center;right;left
             //description: Posição do botão| Center, right ou left| não| center|
-            if (pmb.utils.showBigScreen(top.$("body")) == true) {
+            if (abner.utils.showBigScreen(top.$("body")) == true) {
                 this.classList.add("ab-button-center-big");
             } else {
                 this.classList.add("ab-button-center");
@@ -348,7 +348,7 @@ class AbButton extends HTMLElement {
 
             case "position":
                 if (newVal == "center") {
-                    if (pmb.utils.showBigScreen(top.$("body")) == true) {
+                    if (abner.utils.showBigScreen(top.$("body")) == true) {
                         this.classList.add("ab-button-center-big");
                     } else {
                         this.classList.add("ab-button-center");
@@ -359,7 +359,7 @@ class AbButton extends HTMLElement {
                 break;
 
             case "width-on-bigscreen":
-                if (pmb.utils.showBigScreen(top.$("body"))) {
+                if (abner.utils.showBigScreen(top.$("body"))) {
                     this.style.width = newVal;
                 }
                 break;

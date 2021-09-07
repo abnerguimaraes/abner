@@ -1,12 +1,8 @@
 "use strict";
 
-//component-wrapper: non-functional
+var AbnerUtils = function () { }
 
-//Criando namespace utils
-var PmbUtils = function () { }
-
-
-PmbUtils.prototype.removeAccent = function (word) {
+AbnerUtils.prototype.removeAccent = function (word) {
     var _this = this;
 
     var map = {
@@ -86,7 +82,7 @@ PmbUtils.prototype.removeAccent = function (word) {
 }
 
 //PEga variaveis da URL
-PmbUtils.prototype.getUrlVars = function () {
+AbnerUtils.prototype.getUrlVars = function () {
     var vars = new Object(),
         hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -98,7 +94,7 @@ PmbUtils.prototype.getUrlVars = function () {
 }
 
 //Determina se é modo adaptativo 
-PmbUtils.prototype.showBigScreen = function (obj) {
+AbnerUtils.prototype.showBigScreen = function (obj) {
     if (parseInt(obj.outerWidth()) >= 1024) {
         return true;
     } else {
@@ -106,7 +102,7 @@ PmbUtils.prototype.showBigScreen = function (obj) {
     }
 }
 
-PmbUtils.prototype.getCheckedRadio = function (name) {
+AbnerUtils.prototype.getCheckedRadio = function (name) {
     if (name) {
         return $("input[type=radio][name=" + name + "]:checked").parent();
     } else {
@@ -114,7 +110,7 @@ PmbUtils.prototype.getCheckedRadio = function (name) {
     }
 }
 
-PmbUtils.prototype.getPhoneAsObject = function (phone) {
+AbnerUtils.prototype.getPhoneAsObject = function (phone) {
 
     var phoneObj = {
         ddi: "",
@@ -136,7 +132,7 @@ PmbUtils.prototype.getPhoneAsObject = function (phone) {
     return phoneObj;
 }
 
-PmbUtils.prototype.formatPhone = function (phone) {
+AbnerUtils.prototype.formatPhone = function (phone) {
 
     var phoneReturn = phone.replace(/[^0-9]/g, '');
 
@@ -149,7 +145,7 @@ PmbUtils.prototype.formatPhone = function (phone) {
     return phoneReturn;
 }
 
-PmbUtils.prototype.removeCpfCnpjFormat = function (valor, type) {
+AbnerUtils.prototype.removeCpfCnpjFormat = function (valor, type) {
 
     if (valor) {
         //remove ponto e virgula
@@ -184,7 +180,7 @@ PmbUtils.prototype.removeCpfCnpjFormat = function (valor, type) {
     return valor;
 }
 
-PmbUtils.prototype.validarCNPJ = function (cnpj) {
+AbnerUtils.prototype.validarCNPJ = function (cnpj) {
 
     cnpj = cnpj.replace(/[^\d]+/g, '');
     
@@ -240,7 +236,7 @@ PmbUtils.prototype.validarCNPJ = function (cnpj) {
 }
 
 //valida o CPF digitado
-PmbUtils.prototype.validarCPF = function(cpf) {
+AbnerUtils.prototype.validarCPF = function(cpf) {
 
     var exp = /\.|\-/g
     cpf = cpf.toString().replace(exp, "");
@@ -295,7 +291,7 @@ PmbUtils.prototype.validarCPF = function(cpf) {
     return true;
 }
 
-PmbUtils.prototype.validarEMAIL = function(email) {
+AbnerUtils.prototype.validarEMAIL = function(email) {
     var emailValidation = email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+$/);
 
     if (email == emailValidation) {

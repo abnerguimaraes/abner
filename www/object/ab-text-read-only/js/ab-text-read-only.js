@@ -57,7 +57,7 @@ class AbTextReadOnly extends HTMLElement {
         //verifica width-on-bigscreen
         if (this.hasAttribute("width-on-bigscreen")) {
             //description: Define a largura do componente em telas maiores| % ou px| não| |
-            if (pmb.utils.showBigScreen(top.$("body"))) {
+            if (abner.utils.showBigScreen(top.$("body"))) {
                 this.classList.add("ab-text-read-only-bigscreen")
                 this.style.width = this.getAttribute("width-on-bigscreen");
             } else {
