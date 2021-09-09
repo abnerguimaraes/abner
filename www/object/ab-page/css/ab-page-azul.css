@@ -1,13 +1,13 @@
 :root {
     /* cores primárias */
-    --cor-pri: #FDD835;    /* Botão primário, Botão secundário, Icone ilustrativo, Mensagem de erro, Aba, Loader, Paginação, Linha do tempo */
-    --cor-pri-ativa: #FFFF6B; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
-    --cor-pri-hover: #C6A700; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+    --cor-pri: #1a237e;      /* Botão primário, Botão secundário, Icone ilustrativo, Mensagem de erro, Aba, Loader, Paginação, Linha do tempo */
+    --cor-pri-ativa: #534bae; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-pri-hover: #000051; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
 
     /* Cores secundárias */
-    --cor-seg: #FFE0B2;       /* Botão seletor, pop over */
-    --cor-seg-ativa: #FFFFE4; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
-    --cor-seg-hover: #CBAE82; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
+    --cor-seg: #4a148c;       /* Botão seletor, pop over */
+    --cor-seg-ativa: #7c43bd; /* Essa cor é usada quando os botões primários e secundários estão pressionados */
+    --cor-seg-hover: #12005e; /* Essa cor é usada quando os botões primários e secundários estão no estado hover */
 
     --cor-seg-destaque: #73308B; /* Gráficos e Texto em destaque */
     --cor-grafico2: #B41A83;     /* Gráficos */
